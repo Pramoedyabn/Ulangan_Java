@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apakah Bilanganmu Ganjil Atau Genap</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      input[type="number"] {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        width: 200px;
+      }
+
+      button {
+        padding: 12px 24px;
+        font-size: 18px;
+        background-color: #4c89af;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      #hasil {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Apakah Bilanganmu Ganjil Atau Genap</h1>
+    <p>Masukkan sebuah bilangan: <input type="number" id="bilangan" /></p>
+    <button onclick="cekGanjilGenap()">Cek</button>
+    <p id="hasil"></p>
+
+    <script>
+      function cekGanjilGenap() {
+        var bilangan = document.getElementById("bilangan").value;
+
+        if (bilangan % 2 === 0) {
+          document.getElementById("hasil").innerText =
+            bilangan + " adalah bilangan genap.";
+        } else {
+          document.getElementById("hasil").innerText =
+            bilangan + " adalah bilangan ganjil.";
+        }
+      }
+    </script>
+  </body>
+</html>

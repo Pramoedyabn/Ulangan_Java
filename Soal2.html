@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luas Segitiga</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+
+      input {
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #4c89af;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      #hasil {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Kalkulator Luas Segitiga</h1>
+    <p>Masukkan panjang alas: <input type="number" id="alas" /></p>
+    <p>Masukkan tinggi: <input type="number" id="tinggi" /></p>
+    <button onclick="hitungLuas()">Hitung Luas</button>
+    <p id="hasil"></p>
+
+    <script>
+      function hitungLuas() {
+        var alas = document.getElementById("alas").value;
+        var tinggi = document.getElementById("tinggi").value;
+        var luas = 0.5 * alas * tinggi;
+        document.getElementById("hasil").innerText =
+          "Luas segitiga adalah: " + luas;
+      }
+    </script>
+  </body>
+</html>
